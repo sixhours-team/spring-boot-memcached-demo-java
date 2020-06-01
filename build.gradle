@@ -1,8 +1,9 @@
 plugins {
-    id 'org.springframework.boot' version '2.2.1.RELEASE'
-    id 'io.spring.dependency-management' version '1.0.8.RELEASE'
+    id 'org.springframework.boot' version '2.2.6.RELEASE'
     id 'java'
 }
+
+apply plugin: 'io.spring.dependency-management'
 
 group = 'io.sixhours'
 version = '0.0.1-SNAPSHOT'
@@ -19,7 +20,7 @@ repositories {
 
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
-    implementation 'io.sixhours:memcached-spring-boot-starter:2.0.0-SNAPSHOT'
+    implementation 'io.sixhours:memcached-spring-boot-starter:2.1.1-SNAPSHOT'
 
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
