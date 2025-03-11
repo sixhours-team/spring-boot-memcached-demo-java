@@ -1,0 +1,10 @@
+version: '3.7'
+services:
+  memcached:
+    container_name: demo-memcached
+    image: bitnami/memcached:latest
+    ports:
+      - "11211:11211"
+    environment:
+      MEMCACHED_USERNAME: my_user
+      MEMCACHED_PASSWORD: my_password
