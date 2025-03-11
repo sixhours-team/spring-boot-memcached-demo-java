@@ -15,11 +15,14 @@ import java.util.stream.Collectors;
  */
 @Repository
 public class SimpleBookRepository implements BookRepository {
-    private List<Book> books = List.of(
-            new Book(1, "Kotlin in Action", 2017),
-            new Book(2, "Spring Boot in Action", 2016),
-            new Book(3, "Programming Kotlin", 2017),
-            new Book(4, "Kotlin", 2017));
+    private final List<Book> books = new ArrayList<>();
+
+    {
+        books.add(new Book(1, "Kotlin in Action", 2017));
+        books.add(new Book(2, "Spring Boot in Action", 2016));
+        books.add(new Book(3, "Programming Kotlin", 2017));
+        books.add(new Book(4, "Kotlin", 2017));
+    }
 
     @Override
     @Cacheable("books")
